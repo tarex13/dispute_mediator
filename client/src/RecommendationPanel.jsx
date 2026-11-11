@@ -348,11 +348,11 @@ export default function RecommendationPanel({
                                     {rec.evidenceUsed?.length > 0 && (
                                         <div>
                                             <div className="mb-2 text-xs font-bold uppercase tracking-wide text-slate-300">What this is based on</div>
-                                            <ul className="flex flex-wrap justify-between">
+                                            <ul className="grid grid-cols-2 justify-center">
                                                 {rec.evidenceUsed.map((e, i) => (
-                                                    <li key={i} className={`border-l-1 flex items-start gap-3 text-sm text-slate-300 items-center p-2 m-1 ${SOURCE_STYLES[e.source]}`}>
-                                                        <span className={`pl-2 pr-2 shrink-0 ${SOURCE_STYLES[e.source] ?? ''}`}>{SOURCE_LABELS[e.source] ?? e.source}</span>
-                                                        <span>{e.point}</span>
+                                                    <li key={i} className={`border-l-1 flex items-center gap-3 text-sm text-slate-300 p-2 m-1 ${SOURCE_STYLES[e.source]}`}>
+                                                        <span className={`pl-2 pr-2 h-[80%] flex items-center shrink-0 ${SOURCE_STYLES[e.source] ?? ''}`}>{SOURCE_LABELS[e.source] ?? e.source}</span>
+                                                        <span className='text-left'>{e.point}</span>
                                                     </li>
                                                 ))}
                                             </ul>
@@ -416,7 +416,7 @@ export default function RecommendationPanel({
                                             {needsAmount && (
                                                 <Field label={rec.action === 'MAKE_OFFER' ? 'Offer amount' : 'Refund amount'}>
                                                     <div className="flex items-center gap-3">
-                                                        <input type="number" step="0.01" min="0" className={`${inputCls} max-w-[10rem]`}
+                                                        <input type="number" step="0.5" min="0" className={`${inputCls} max-w-[10rem]`}
                                                             value={amount} onChange={(e) => { setAmount(e.target.value); setConfirming(false); }} />
                                                         <span className="text-xs text-slate-400">
                                                             Suggested by the agent; you decide. Must be below {money(ceiling, cur)}.

@@ -4,6 +4,8 @@ import DisputeGrid from './DisputeGrid';
 import { ACTION_LABELS, money, recSummary } from './labels';
 import RecommendationPanel from './RecommendationPanel';
 
+import { useRef } from 'react'; 
+
 const BLUE = '#009CDE';
 
 function StatTile({ label, value, accent }) {
@@ -30,6 +32,10 @@ function App() {
   const [busyIds, setBusyIds] = useState({});     // dispute id -> true while the AI call runs
   const [approved, setApproved] = useState({});   // dispute id -> { mode, action, paypalStatus }
 
+
+  const deepLinkHandled = useRef(false);
+  const panelRef = useRef(null);
+  const [notice, setNotice] = useState(null);
   // Load disputes once.
   useEffect(() => {
     let cancelled = false;
@@ -69,6 +75,28 @@ function App() {
     }
     setBusyIds((p) => ({ ...p, [id]: false }));
   }, []);
+
+
+  useEffect(() => {
+    if (deepLinkHandled.current || loading || error) return;
+    deepLinkHandled.current = true;
+
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get('dispute');
+    console.log(id);
+    if (!id) return;
+
+    // Clear the URL so a refresh doesn't trigger another AI call.
+    window.history.replaceState({}, '', window.location.pathname);
+
+    const card = cards.find((c) => c.id === id);
+    if (!card) { setNotice(`Dispute ${id} was not found.`); return; }
+
+    setSelectedId(id);
+    const actionable = card.analysis.waitingOn === 'seller' && card.analysis.supported;
+    if (params.get('generate') === '1' && actionable && !recs[id]) generate(id);
+    setTimeout(() => panelRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 150);
+  }, [loading, error, cards, recs, generate]);
 
   const handleSelect = useCallback((id) => {
     setSelectedId(id);
@@ -164,6 +192,7 @@ function App() {
             <RecommendationPanel
               key={selected.id}
               card={selected}
+              ref={panelRef}
               rec={recs[selected.id]}
               busy={!!busyIds[selected.id]}
               error={recErrors[selected.id]}
