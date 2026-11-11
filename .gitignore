@@ -1,0 +1,10 @@
+.env
+node_modules/
+data/
+assets/
+public/
+cache/
+fixtures/
+decisions.md
+demo-scenarios/
+readme.md
