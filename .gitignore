@@ -1,6 +1,8 @@
 .env
 node_modules/
-data/
+context/
+audit.log
+dispute-raw*.json
 assets/
 public/
 cache/
