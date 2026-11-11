@@ -1,3 +1,6 @@
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
 import 'dotenv/config';
 import express from 'express';
 import disputesLoad from './server/api/disputesLoad.js';
@@ -13,4 +16,13 @@ app.all('/api/disputes/:id/recommend', recommend);
 app.all('/api/disputes/:id/approve', approve);
 
 const port = process.env.PORT || 3000;
+const clientDist = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', 'client', 'dist');
+app.use(express.static(clientDist));
+app.use((req, res, next) => {
+  if (req.method === 'GET' && !req.path.startsWith('/api')) {
+    return res.sendFile(path.join(clientDist, 'index.html'));
+  }
+  next();
+});
+
 app.listen(port, () => console.log(`API on http://localhost:${port}`));
