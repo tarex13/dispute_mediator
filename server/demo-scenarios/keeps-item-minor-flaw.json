@@ -1,0 +1,113 @@
+{
+  "id": "keeps-item-minor-flaw",
+  "title": "Buyer wants to keep the item with a small flaw",
+  "acceptable": [
+    "MAKE_OFFER",
+    "ACCEPT_CLAIM"
+  ],
+  "dispute": {
+    "dispute_id": "DEMO-keeps-item-minor-flaw",
+    "create_time": "2026-10-29T14:00:00.000Z",
+    "update_time": "2026-10-29T14:00:00.000Z",
+    "disputed_transactions": [
+      {
+        "gross_amount": {
+          "currency_code": "CAD",
+          "value": "90.00"
+        },
+        "items": [
+          {
+            "item_name": "Bluetooth speaker",
+            "reason": "MERCHANDISE_OR_SERVICE_NOT_AS_DESCRIBED"
+          }
+        ],
+        "seller_protection_eligible": true
+      }
+    ],
+    "reason": "MERCHANDISE_OR_SERVICE_NOT_AS_DESCRIBED",
+    "status": "WAITING_FOR_SELLER_RESPONSE",
+    "dispute_amount": {
+      "currency_code": "CAD",
+      "value": "90.00"
+    },
+    "dispute_state": "REQUIRED_ACTION",
+    "dispute_life_cycle_stage": "INQUIRY",
+    "messages": [
+      {
+        "posted_by": "BUYER",
+        "time_posted": "2026-10-29T14:00:00.000Z",
+        "content": "The speaker has a small scratch on the back. I want to keep it but get some money back."
+      }
+    ],
+    "evidences": [
+      {
+        "evidence_type": "CREATE",
+        "notes": "The speaker has a small scratch on the back. I want to keep it but get some money back.",
+        "source": "SUBMITTED_BY_BUYER",
+        "date": "2026-10-29T14:00:00.000Z"
+      }
+    ],
+    "seller_response_due_date": "2026-11-12T14:00:00.000Z",
+    "offer": {
+      "buyer_requested_amount": {
+        "currency_code": "CAD",
+        "value": "90.00"
+      }
+    },
+    "refund_details": {
+      "allowed_refund_amount": {
+        "currency_code": "CAD",
+        "value": "90.00"
+      }
+    },
+    "allowed_response_options": {
+      "accept_claim": {
+        "accept_claim_types": [
+          "PARTIAL_REFUND",
+          "REFUND_WITH_RETURN",
+          "REFUND"
+        ]
+      },
+      "make_offer": {
+        "offer_types": [
+          "REFUND",
+          "REFUND_WITH_RETURN"
+        ]
+      }
+    },
+    "fund_movements": [],
+    "links": [
+      {
+        "rel": "accept_claim",
+        "method": "POST"
+      },
+      {
+        "rel": "provide_evidence",
+        "method": "POST"
+      },
+      {
+        "rel": "make_offer",
+        "method": "POST"
+      }
+    ]
+  },
+  "context": {
+    "buyerStatement": "Works perfectly. Just a small scratch that was not in the listing.",
+    "sellerStatement": "I listed it as new in box. I did not notice a scratch when packing.",
+    "order": {
+      "itemName": "Bluetooth speaker",
+      "price": 90,
+      "orderedDate": "2026-10-14",
+      "shippedDate": "2026-10-15",
+      "carrier": "Canada Post",
+      "trackingNumber": "DEMO-CP-640018",
+      "trackingStatus": "Delivered",
+      "deliveredDate": "2026-10-19",
+      "signatureOnDelivery": false
+    },
+    "listing": {
+      "description": "Bluetooth speaker, new in box.",
+      "returnPolicy": "Returns accepted within 14 days."
+    }
+  }
+}

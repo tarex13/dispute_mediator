@@ -1,0 +1,110 @@
+{
+  "id": "delivered-with-proof",
+  "title": "Carrier confirms signed delivery",
+  "acceptable": [
+    "CONTEST"
+  ],
+  "dispute": {
+    "dispute_id": "DEMO-delivered-with-proof",
+    "create_time": "2026-10-29T14:00:00.000Z",
+    "update_time": "2026-10-29T14:00:00.000Z",
+    "disputed_transactions": [
+      {
+        "gross_amount": {
+          "currency_code": "CAD",
+          "value": "85.00"
+        },
+        "items": [
+          {
+            "item_name": "Ceramic coffee set",
+            "reason": "MERCHANDISE_OR_SERVICE_NOT_RECEIVED"
+          }
+        ],
+        "seller_protection_eligible": true
+      }
+    ],
+    "reason": "MERCHANDISE_OR_SERVICE_NOT_RECEIVED",
+    "status": "WAITING_FOR_SELLER_RESPONSE",
+    "dispute_amount": {
+      "currency_code": "CAD",
+      "value": "85.00"
+    },
+    "dispute_state": "REQUIRED_ACTION",
+    "dispute_life_cycle_stage": "INQUIRY",
+    "messages": [
+      {
+        "posted_by": "BUYER",
+        "time_posted": "2026-10-29T14:00:00.000Z",
+        "content": "I never got my order. Nothing was delivered to my address."
+      }
+    ],
+    "evidences": [
+      {
+        "evidence_type": "CREATE",
+        "notes": "I never got my order. Nothing was delivered to my address.",
+        "source": "SUBMITTED_BY_BUYER",
+        "date": "2026-10-29T14:00:00.000Z"
+      }
+    ],
+    "seller_response_due_date": "2026-11-12T14:00:00.000Z",
+    "offer": {
+      "buyer_requested_amount": {
+        "currency_code": "CAD",
+        "value": "85.00"
+      }
+    },
+    "refund_details": {
+      "allowed_refund_amount": {
+        "currency_code": "CAD",
+        "value": "85.00"
+      }
+    },
+    "allowed_response_options": {
+      "accept_claim": {
+        "accept_claim_types": [
+          "PARTIAL_REFUND",
+          "REFUND"
+        ]
+      },
+      "make_offer": {
+        "offer_types": [
+          "REFUND"
+        ]
+      }
+    },
+    "fund_movements": [],
+    "links": [
+      {
+        "rel": "accept_claim",
+        "method": "POST"
+      },
+      {
+        "rel": "provide_evidence",
+        "method": "POST"
+      },
+      {
+        "rel": "make_offer",
+        "method": "POST"
+      }
+    ]
+  },
+  "context": {
+    "buyerStatement": "Nobody told me about a package. I asked my neighbours and could not find it.",
+    "sellerStatement": "Shipped with tracking and signature. The carrier shows it delivered and signed for.",
+    "order": {
+      "itemName": "Ceramic coffee set",
+      "price": 85,
+      "orderedDate": "2026-10-12",
+      "shippedDate": "2026-10-14",
+      "carrier": "Canada Post",
+      "trackingNumber": "DEMO-CP-884201",
+      "trackingStatus": "Delivered",
+      "deliveredDate": "2026-10-19",
+      "signatureOnDelivery": true
+    },
+    "listing": {
+      "description": "Six-piece ceramic coffee set, ships in 2 business days.",
+      "returnPolicy": "Returns accepted within 14 days."
+    }
+  }
+}

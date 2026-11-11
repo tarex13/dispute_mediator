@@ -1,0 +1,113 @@
+{
+  "id": "wear-vs-listing",
+  "title": "Buyer reports wear; listing disclosed some of it",
+  "acceptable": [
+    "MAKE_OFFER",
+    "CONTEST"
+  ],
+  "dispute": {
+    "dispute_id": "DEMO-wear-vs-listing",
+    "create_time": "2026-10-29T14:00:00.000Z",
+    "update_time": "2026-10-29T14:00:00.000Z",
+    "disputed_transactions": [
+      {
+        "gross_amount": {
+          "currency_code": "CAD",
+          "value": "240.00"
+        },
+        "items": [
+          {
+            "item_name": "Leather jacket (pre-owned)",
+            "reason": "MERCHANDISE_OR_SERVICE_NOT_AS_DESCRIBED"
+          }
+        ],
+        "seller_protection_eligible": true
+      }
+    ],
+    "reason": "MERCHANDISE_OR_SERVICE_NOT_AS_DESCRIBED",
+    "status": "WAITING_FOR_SELLER_RESPONSE",
+    "dispute_amount": {
+      "currency_code": "CAD",
+      "value": "240.00"
+    },
+    "dispute_state": "REQUIRED_ACTION",
+    "dispute_life_cycle_stage": "INQUIRY",
+    "messages": [
+      {
+        "posted_by": "BUYER",
+        "time_posted": "2026-10-29T14:00:00.000Z",
+        "content": "The jacket has visible scratches and wear. Not as described."
+      }
+    ],
+    "evidences": [
+      {
+        "evidence_type": "CREATE",
+        "notes": "The jacket has visible scratches and wear. Not as described.",
+        "source": "SUBMITTED_BY_BUYER",
+        "date": "2026-10-29T14:00:00.000Z"
+      }
+    ],
+    "seller_response_due_date": "2026-11-12T14:00:00.000Z",
+    "offer": {
+      "buyer_requested_amount": {
+        "currency_code": "CAD",
+        "value": "240.00"
+      }
+    },
+    "refund_details": {
+      "allowed_refund_amount": {
+        "currency_code": "CAD",
+        "value": "240.00"
+      }
+    },
+    "allowed_response_options": {
+      "accept_claim": {
+        "accept_claim_types": [
+          "PARTIAL_REFUND",
+          "REFUND_WITH_RETURN",
+          "REFUND"
+        ]
+      },
+      "make_offer": {
+        "offer_types": [
+          "REFUND",
+          "REFUND_WITH_RETURN"
+        ]
+      }
+    },
+    "fund_movements": [],
+    "links": [
+      {
+        "rel": "accept_claim",
+        "method": "POST"
+      },
+      {
+        "rel": "provide_evidence",
+        "method": "POST"
+      },
+      {
+        "rel": "make_offer",
+        "method": "POST"
+      }
+    ]
+  },
+  "context": {
+    "buyerStatement": "Scuffs on both sleeves and a worn collar.",
+    "sellerStatement": "The listing photos show the sleeve scuffs. The collar was not photographed.",
+    "order": {
+      "itemName": "Leather jacket (pre-owned)",
+      "price": 240,
+      "orderedDate": "2026-10-15",
+      "shippedDate": "2026-10-16",
+      "carrier": "Canada Post",
+      "trackingNumber": "DEMO-CP-902114",
+      "trackingStatus": "Delivered",
+      "deliveredDate": "2026-10-20",
+      "signatureOnDelivery": false
+    },
+    "listing": {
+      "description": "Pre-owned leather jacket, good condition, minor scuffs on sleeves, see photos.",
+      "returnPolicy": "Returns accepted within 14 days if unworn."
+    }
+  }
+}

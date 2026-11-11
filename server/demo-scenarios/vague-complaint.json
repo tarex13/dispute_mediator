@@ -1,0 +1,112 @@
+{
+  "id": "vague-complaint",
+  "title": "Buyer gives almost no detail",
+  "acceptable": [
+    "NEED_MORE_INFO"
+  ],
+  "dispute": {
+    "dispute_id": "DEMO-vague-complaint",
+    "create_time": "2026-10-29T14:00:00.000Z",
+    "update_time": "2026-10-29T14:00:00.000Z",
+    "disputed_transactions": [
+      {
+        "gross_amount": {
+          "currency_code": "CAD",
+          "value": "150.00"
+        },
+        "items": [
+          {
+            "item_name": "Handmade wool rug",
+            "reason": "MERCHANDISE_OR_SERVICE_NOT_AS_DESCRIBED"
+          }
+        ],
+        "seller_protection_eligible": true
+      }
+    ],
+    "reason": "MERCHANDISE_OR_SERVICE_NOT_AS_DESCRIBED",
+    "status": "WAITING_FOR_SELLER_RESPONSE",
+    "dispute_amount": {
+      "currency_code": "CAD",
+      "value": "150.00"
+    },
+    "dispute_state": "REQUIRED_ACTION",
+    "dispute_life_cycle_stage": "INQUIRY",
+    "messages": [
+      {
+        "posted_by": "BUYER",
+        "time_posted": "2026-10-29T14:00:00.000Z",
+        "content": "Not what I expected."
+      }
+    ],
+    "evidences": [
+      {
+        "evidence_type": "CREATE",
+        "notes": "Not what I expected.",
+        "source": "SUBMITTED_BY_BUYER",
+        "date": "2026-10-29T14:00:00.000Z"
+      }
+    ],
+    "seller_response_due_date": "2026-11-12T14:00:00.000Z",
+    "offer": {
+      "buyer_requested_amount": {
+        "currency_code": "CAD",
+        "value": "150.00"
+      }
+    },
+    "refund_details": {
+      "allowed_refund_amount": {
+        "currency_code": "CAD",
+        "value": "150.00"
+      }
+    },
+    "allowed_response_options": {
+      "accept_claim": {
+        "accept_claim_types": [
+          "PARTIAL_REFUND",
+          "REFUND_WITH_RETURN",
+          "REFUND"
+        ]
+      },
+      "make_offer": {
+        "offer_types": [
+          "REFUND",
+          "REFUND_WITH_RETURN"
+        ]
+      }
+    },
+    "fund_movements": [],
+    "links": [
+      {
+        "rel": "accept_claim",
+        "method": "POST"
+      },
+      {
+        "rel": "provide_evidence",
+        "method": "POST"
+      },
+      {
+        "rel": "make_offer",
+        "method": "POST"
+      }
+    ]
+  },
+  "context": {
+    "buyerStatement": null,
+    "sellerStatement": null,
+    "order": {
+      "itemName": "Handmade wool rug",
+      "price": 150,
+      "orderedDate": "2026-10-12",
+      "shippedDate": "2026-10-20",
+      "carrier": "Canada Post",
+      "trackingNumber": "DEMO-CP-118820",
+      "trackingStatus": "Delivered",
+      "deliveredDate": "2026-10-25",
+      "signatureOnDelivery": false
+    },
+    "listing": {
+      "description": "Handmade wool rug, 90x150 cm. Colours may vary slightly from screen.",
+      "returnPolicy": "Returns accepted within 14 days."
+    }
+  }
+}

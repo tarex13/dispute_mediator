@@ -1,0 +1,112 @@
+{
+  "id": "wrong-size-shipped",
+  "title": "Seller shipped the wrong size",
+  "acceptable": [
+    "ACCEPT_CLAIM"
+  ],
+  "dispute": {
+    "dispute_id": "DEMO-wrong-size-shipped",
+    "create_time": "2026-10-29T14:00:00.000Z",
+    "update_time": "2026-10-29T14:00:00.000Z",
+    "disputed_transactions": [
+      {
+        "gross_amount": {
+          "currency_code": "CAD",
+          "value": "60.00"
+        },
+        "items": [
+          {
+            "item_name": "Cotton hoodie, size M",
+            "reason": "MERCHANDISE_OR_SERVICE_NOT_AS_DESCRIBED"
+          }
+        ],
+        "seller_protection_eligible": true
+      }
+    ],
+    "reason": "MERCHANDISE_OR_SERVICE_NOT_AS_DESCRIBED",
+    "status": "WAITING_FOR_SELLER_RESPONSE",
+    "dispute_amount": {
+      "currency_code": "CAD",
+      "value": "60.00"
+    },
+    "dispute_state": "REQUIRED_ACTION",
+    "dispute_life_cycle_stage": "INQUIRY",
+    "messages": [
+      {
+        "posted_by": "BUYER",
+        "time_posted": "2026-10-29T14:00:00.000Z",
+        "content": "I ordered a medium and received a large."
+      }
+    ],
+    "evidences": [
+      {
+        "evidence_type": "CREATE",
+        "notes": "I ordered a medium and received a large.",
+        "source": "SUBMITTED_BY_BUYER",
+        "date": "2026-10-29T14:00:00.000Z"
+      }
+    ],
+    "seller_response_due_date": "2026-11-12T14:00:00.000Z",
+    "offer": {
+      "buyer_requested_amount": {
+        "currency_code": "CAD",
+        "value": "60.00"
+      }
+    },
+    "refund_details": {
+      "allowed_refund_amount": {
+        "currency_code": "CAD",
+        "value": "60.00"
+      }
+    },
+    "allowed_response_options": {
+      "accept_claim": {
+        "accept_claim_types": [
+          "PARTIAL_REFUND",
+          "REFUND_WITH_RETURN",
+          "REFUND"
+        ]
+      },
+      "make_offer": {
+        "offer_types": [
+          "REFUND",
+          "REFUND_WITH_RETURN"
+        ]
+      }
+    },
+    "fund_movements": [],
+    "links": [
+      {
+        "rel": "accept_claim",
+        "method": "POST"
+      },
+      {
+        "rel": "provide_evidence",
+        "method": "POST"
+      },
+      {
+        "rel": "make_offer",
+        "method": "POST"
+      }
+    ]
+  },
+  "context": {
+    "buyerStatement": "The tag says L. I ordered M. It does not fit.",
+    "sellerStatement": "I checked my records and I did ship a large by mistake.",
+    "order": {
+      "itemName": "Cotton hoodie, size M",
+      "price": 60,
+      "orderedDate": "2026-10-16",
+      "shippedDate": "2026-10-17",
+      "carrier": "Canada Post",
+      "trackingNumber": "DEMO-CP-330771",
+      "trackingStatus": "Delivered",
+      "deliveredDate": "2026-10-22",
+      "signatureOnDelivery": false
+    },
+    "listing": {
+      "description": "Cotton hoodie, sizes S to XL.",
+      "returnPolicy": "Returns accepted within 14 days."
+    }
+  }
+}

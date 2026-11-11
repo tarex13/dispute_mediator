@@ -1,0 +1,112 @@
+{
+  "id": "stuck-in-transit",
+  "title": "Tracking exists but has not moved in two weeks",
+  "acceptable": [
+    "ACCEPT_CLAIM",
+    "MAKE_OFFER",
+    "NEED_MORE_INFO"
+  ],
+  "dispute": {
+    "dispute_id": "DEMO-stuck-in-transit",
+    "create_time": "2026-10-29T14:00:00.000Z",
+    "update_time": "2026-10-29T14:00:00.000Z",
+    "disputed_transactions": [
+      {
+        "gross_amount": {
+          "currency_code": "CAD",
+          "value": "120.00"
+        },
+        "items": [
+          {
+            "item_name": "Desk lamp",
+            "reason": "MERCHANDISE_OR_SERVICE_NOT_RECEIVED"
+          }
+        ],
+        "seller_protection_eligible": true
+      }
+    ],
+    "reason": "MERCHANDISE_OR_SERVICE_NOT_RECEIVED",
+    "status": "WAITING_FOR_SELLER_RESPONSE",
+    "dispute_amount": {
+      "currency_code": "CAD",
+      "value": "120.00"
+    },
+    "dispute_state": "REQUIRED_ACTION",
+    "dispute_life_cycle_stage": "INQUIRY",
+    "messages": [
+      {
+        "posted_by": "BUYER",
+        "time_posted": "2026-10-29T14:00:00.000Z",
+        "content": "The package never showed up and tracking is frozen."
+      }
+    ],
+    "evidences": [
+      {
+        "evidence_type": "CREATE",
+        "notes": "The package never showed up and tracking is frozen.",
+        "source": "SUBMITTED_BY_BUYER",
+        "date": "2026-10-29T14:00:00.000Z"
+      }
+    ],
+    "seller_response_due_date": "2026-11-12T14:00:00.000Z",
+    "offer": {
+      "buyer_requested_amount": {
+        "currency_code": "CAD",
+        "value": "120.00"
+      }
+    },
+    "refund_details": {
+      "allowed_refund_amount": {
+        "currency_code": "CAD",
+        "value": "120.00"
+      }
+    },
+    "allowed_response_options": {
+      "accept_claim": {
+        "accept_claim_types": [
+          "PARTIAL_REFUND",
+          "REFUND"
+        ]
+      },
+      "make_offer": {
+        "offer_types": [
+          "REFUND"
+        ]
+      }
+    },
+    "fund_movements": [],
+    "links": [
+      {
+        "rel": "accept_claim",
+        "method": "POST"
+      },
+      {
+        "rel": "provide_evidence",
+        "method": "POST"
+      },
+      {
+        "rel": "make_offer",
+        "method": "POST"
+      }
+    ]
+  },
+  "context": {
+    "buyerStatement": "Tracking has not moved for two weeks. I want my money back or the item.",
+    "sellerStatement": "It shipped on time. The carrier has not updated since Oct 17.",
+    "order": {
+      "itemName": "Desk lamp",
+      "price": 120,
+      "orderedDate": "2026-10-10",
+      "shippedDate": "2026-10-14",
+      "carrier": "Purolator",
+      "trackingNumber": "DEMO-PU-771204",
+      "trackingStatus": "In transit, no scan since 2026-10-17",
+      "deliveredDate": null,
+      "signatureOnDelivery": null
+    },
+    "listing": {
+      "description": "Adjustable LED desk lamp.",
+      "returnPolicy": "Returns accepted within 14 days."
+    }
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "id": "never-shipped",
+  "title": "Seller admits the item was never shipped",
+  "acceptable": [
+    "ACCEPT_CLAIM"
+  ],
+  "dispute": {
+    "dispute_id": "DEMO-never-shipped",
+    "create_time": "2026-10-29T14:00:00.000Z",
+    "update_time": "2026-10-29T14:00:00.000Z",
+    "disputed_transactions": [
+      {
+        "gross_amount": {
+          "currency_code": "CAD",
+          "value": "42.00"
+        },
+        "items": [
+          {
+            "item_name": "Phone case set",
+            "reason": "MERCHANDISE_OR_SERVICE_NOT_RECEIVED"
+          }
+        ],
+        "seller_protection_eligible": true
+      }
+    ],
+    "reason": "MERCHANDISE_OR_SERVICE_NOT_RECEIVED",
+    "status": "WAITING_FOR_SELLER_RESPONSE",
+    "dispute_amount": {
+      "currency_code": "CAD",
+      "value": "42.00"
+    },
+    "dispute_state": "REQUIRED_ACTION",
+    "dispute_life_cycle_stage": "INQUIRY",
+    "messages": [
+      {
+        "posted_by": "BUYER",
+        "time_posted": "2026-10-29T14:00:00.000Z",
+        "content": "It has been three weeks and nothing has arrived."
+      }
+    ],
+    "evidences": [
+      {
+        "evidence_type": "CREATE",
+        "notes": "It has been three weeks and nothing has arrived.",
+        "source": "SUBMITTED_BY_BUYER",
+        "date": "2026-10-29T14:00:00.000Z"
+      }
+    ],
+    "seller_response_due_date": "2026-11-12T14:00:00.000Z",
+    "offer": {
+      "buyer_requested_amount": {
+        "currency_code": "CAD",
+        "value": "42.00"
+      }
+    },
+    "refund_details": {
+      "allowed_refund_amount": {
+        "currency_code": "CAD",
+        "value": "42.00"
+      }
+    },
+    "allowed_response_options": {
+      "accept_claim": {
+        "accept_claim_types": [
+          "PARTIAL_REFUND",
+          "REFUND"
+        ]
+      },
+      "make_offer": {
+        "offer_types": [
+          "REFUND"
+        ]
+      }
+    },
+    "fund_movements": [],
+    "links": [
+      {
+        "rel": "accept_claim",
+        "method": "POST"
+      },
+      {
+        "rel": "provide_evidence",
+        "method": "POST"
+      },
+      {
+        "rel": "make_offer",
+        "method": "POST"
+      }
+    ]
+  },
+  "context": {
+    "buyerStatement": "No tracking number, no updates, no reply to my messages.",
+    "sellerStatement": "The item was on backorder and I have not shipped it. I forgot to tell the buyer.",
+    "order": {
+      "itemName": "Phone case set",
+      "price": 42,
+      "orderedDate": "2026-10-08",
+      "shippedDate": null,
+      "carrier": null,
+      "trackingNumber": null,
+      "trackingStatus": null,
+      "deliveredDate": null,
+      "signatureOnDelivery": null
+    },
+    "listing": {
+      "description": "Set of three phone cases.",
+      "returnPolicy": "Returns accepted within 14 days."
+    }
+  }
+}
