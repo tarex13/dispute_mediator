@@ -1,4 +1,4 @@
-import { prepare } from "../../../lib/http";
+import { prepare } from "../../../lib/http.js";
 
 export default async function handler(req, res){
     if (!prepare(req, res, 'POST')) return;
