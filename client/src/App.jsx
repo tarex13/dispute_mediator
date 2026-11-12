@@ -167,12 +167,12 @@ function App() {
           )}
         </div>
       </header>
-      {mode === 'demo' && showGuide && (
-        <div className="mb-6 rounded-lg border border-[#009CDE]/40 bg-[#009CDE]/10 p-4 text-sm text-slate-200">
-          <div className="flex items-start justify-between gap-4">
+      { (
+        <div className="mb-6 flex justify-center  text-sm text-slate-200">
+          <div className="flex items-start justify-between border border-[#009CDE]/40 bg-[#009CDE]/10 p-4 gap-4">
             <div>
               <div className="font-semibold text-white">Judge's guide: 3 steps, no setup needed</div>
-              <ol className="mt-2 list-decimal space-y-1 pl-5">
+              <ol className="mt-2 list-decimal space-y-1 pl-5 text-left">
                 <li>Click any dispute in the table. A saved agent recommendation appears below it.</li>
                 <li>Read the reasoning, then edit the amount or note. Try an amount that is too high to see the safety check.</li>
                 <li>Click Approve, then Confirm. In demo mode nothing is sent to PayPal, and the server still re-validates everything.</li>
