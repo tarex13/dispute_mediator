@@ -1,0 +1,101 @@
+{
+  "output": {
+    "action": "NEED_MORE_INFO",
+    "refundType": null,
+    "amount": null,
+    "sellerCaseStrength": "LOW",
+    "reasoning": "The buyer's stated reason is that they found the same item cheaper elsewhere, not that the item never arrived. Your records show the UPS tracking still reads Processing with no delivery date, so you cannot yet prove delivery, and that is the proof PayPal asks for. Please check the current UPS status and any signed delivery record before deciding how to respond to this dispute.",
+    "evidenceUsed": [
+      {
+        "source": "PAYPAL_DATA",
+        "point": "The dispute reason is MERCHANDISE_OR_SERVICE_NOT_RECEIVED for 140 CAD, with 20 days left."
+      },
+      {
+        "source": "BUYER",
+        "point": "The buyer said they found the same item cheaper elsewhere and no longer need it from the seller."
+      },
+      {
+        "source": "SELLER",
+        "point": "The order shows a UPS shipment dated 2026-11-10 with tracking status Processing and no delivery date recorded."
+      },
+      {
+        "source": "SELLER",
+        "point": "The order record notes signature on delivery as true, but no delivered date is recorded to match it."
+      },
+      {
+        "source": "SELLER",
+        "point": "The listing return policy is No Refunds."
+      }
+    ],
+    "evidenceGaps": [
+      "Current UPS tracking history showing whether the package was delivered and when.",
+      "Any signed delivery receipt or proof of delivery from UPS.",
+      "A clear statement of what you meant by the item having been sipped, and whether it was shipped.",
+      "Your listing description, which is blank in the records, to show what was offered."
+    ],
+    "alternatives": [
+      {
+        "action": "CONTEST",
+        "whyNot": "Contesting requires proof of delivery or shipment, and the records currently show only Processing status with no delivery date."
+      },
+      {
+        "action": "ACCEPT_CLAIM",
+        "whyNot": "Accepting now would refund a buyer whose stated reason is a change of mind, before confirming whether the item was delivered."
+      }
+    ],
+    "draftNote": "Regarding this dispute, we are reviewing the shipment records for the customized bag, which was shipped with UPS tracking number UPS1002030040 on 2026-11-10. We will share the latest carrier information and any delivery confirmation we can obtain. Thank you for your patience while we look into this.",
+    "followUpQuestions": [
+      {
+        "id": "q1",
+        "question": "Does the current UPS tracking for tracking number UPS1002030040 show the package as delivered, and if so, on what date?",
+        "answerType": "text"
+      },
+      {
+        "id": "q2",
+        "question": "Can you obtain a signed delivery receipt or proof of delivery from UPS for this shipment?",
+        "answerType": "yes_no"
+      },
+      {
+        "id": "q3",
+        "question": "What did you mean by the item has been sipped already, and was the item shipped out of your location?",
+        "answerType": "text"
+      }
+    ],
+    "nextSteps": [
+      "Check the UPS tracking page for tracking number UPS1002030040 and save a copy of the full tracking history.",
+      "Request a proof of delivery or signature record from UPS if the package shows as delivered.",
+      "Answer the follow-up questions, then choose to contest with that evidence or to make a partial or full refund.",
+      "Respond within the 20 days left on this dispute."
+    ]
+  },
+  "usage": {
+    "inputTokens": 3117,
+    "inputTokenDetails": {
+      "noCacheTokens": 3117,
+      "cacheReadTokens": 0,
+      "cacheWriteTokens": 0
+    },
+    "outputTokens": 2074,
+    "outputTokenDetails": {
+      "textTokens": 1048,
+      "reasoningTokens": 1026
+    },
+    "totalTokens": 5191,
+    "raw": {
+      "input_tokens": 3117,
+      "output_tokens": 2074,
+      "output_tokens_details": {
+        "thinking_tokens": 1026
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  }
+}

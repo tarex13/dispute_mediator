@@ -1,0 +1,95 @@
+{
+  "output": {
+    "action": "NEED_MORE_INFO",
+    "refundType": null,
+    "amount": null,
+    "sellerCaseStrength": "MEDIUM",
+    "reasoning": "The buyer says they no longer need the bag because they found it cheaper elsewhere, which is a change of mind rather than proof that the item was never received. Your UPS tracking shows the bag is not delivered yet and its status is still Processing, and your own statement says it has both shipped and is still being prepared, so we need to confirm the actual shipment status before choosing a response. Please check the UPS tracking history and answer the questions below.",
+    "evidenceUsed": [
+      {
+        "source": "BUYER",
+        "point": "The buyer's PayPal message says they found the same item cheaper elsewhere and no longer need the purchase."
+      },
+      {
+        "source": "SELLER",
+        "point": "UPS tracking number UPS1002030040 shows a status of Processing and no delivered date is recorded."
+      },
+      {
+        "source": "SELLER",
+        "point": "The seller statement says the item was delivered to the UPS sorting facility but is also being prepared to be shipped, which is unclear."
+      },
+      {
+        "source": "SELLER",
+        "point": "The order record shows signature on delivery is required."
+      },
+      {
+        "source": "PAYPAL_DATA",
+        "point": "The dispute reason is merchandise or service not received, the disputed amount is 140 CAD, and seller protection eligibility is marked true."
+      }
+    ],
+    "evidenceGaps": [
+      "UPS scan history showing the package left the facility and the date and location of each scan.",
+      "Carrier confirmation of delivery or a signed delivery receipt, if the package has been delivered.",
+      "Confirmation that the buyer's shipping address matches the address on the UPS label."
+    ],
+    "alternatives": [
+      {
+        "action": "CONTEST",
+        "whyNot": "Contesting now would rely on tracking that shows Processing and no delivery, so the evidence is not yet strong enough."
+      },
+      {
+        "action": "ACCEPT_CLAIM",
+        "whyNot": "The item has not been confirmed as undelivered and the buyer's stated reason does not show non-receipt, so refunding now would be premature."
+      }
+    ],
+    "draftNote": "Regarding this dispute, the order was shipped with UPS tracking number UPS1002030040. The tracking currently shows Processing and delivery is not yet confirmed. We are checking the latest carrier scan details and will share them with PayPal as soon as they are available.",
+    "followUpQuestions": [
+      {
+        "id": "q1",
+        "question": "Does the UPS tracking history show the package has left the UPS facility and is in transit?",
+        "answerType": "yes_no"
+      },
+      {
+        "id": "q2",
+        "question": "What is the date and location of the most recent UPS scan?",
+        "answerType": "text"
+      }
+    ],
+    "nextSteps": [
+      "Check the full UPS tracking history for the bag and note the most recent scan.",
+      "Answer the follow-up questions so the decision can be finalized.",
+      "If the package is in transit, share the UPS tracking details and expected delivery date with PayPal.",
+      "If UPS shows the package was delivered, upload the carrier delivery confirmation or signed receipt as evidence."
+    ]
+  },
+  "usage": {
+    "inputTokens": 3221,
+    "inputTokenDetails": {
+      "noCacheTokens": 3221,
+      "cacheReadTokens": 0,
+      "cacheWriteTokens": 0
+    },
+    "outputTokens": 2446,
+    "outputTokenDetails": {
+      "textTokens": 987,
+      "reasoningTokens": 1459
+    },
+    "totalTokens": 5667,
+    "raw": {
+      "input_tokens": 3221,
+      "output_tokens": 2446,
+      "output_tokens_details": {
+        "thinking_tokens": 1459
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  }
+}

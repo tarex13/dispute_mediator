@@ -1,0 +1,88 @@
+{
+  "output": {
+    "action": "CONTEST",
+    "refundType": null,
+    "amount": null,
+    "sellerCaseStrength": "MEDIUM",
+    "reasoning": "The buyer opened this dispute because the item was not received, but their stated reason is that they found the same item cheaper elsewhere. Your records show a UPS tracking number, a November 10 ship date, and a UPS history that you confirmed shows the package left the facility and is in transit, with the latest scan on November 12. Because the package appears to still be moving with the carrier, you have a reasonable basis to contest, but you should check the live UPS tracking first because your order record still says Processing and your statement about the shipping status is inconsistent.",
+    "evidenceUsed": [
+      {
+        "source": "PAYPAL_DATA",
+        "point": "The dispute reason is MERCHANDISE_OR_SERVICE_NOT_RECEIVED, the disputed amount is 140 CAD, and the seller is marked eligible for Seller Protection."
+      },
+      {
+        "source": "BUYER",
+        "point": "The buyer said they noticed the same item cheaper elsewhere and no longer need the purchase from the seller."
+      },
+      {
+        "source": "SELLER",
+        "point": "The order was shipped via UPS on 2026-11-10 with tracking number UPS1002030040, and signature on delivery is required."
+      },
+      {
+        "source": "SELLER",
+        "point": "Follow-up answer confirms the UPS tracking history shows the package left the UPS facility and is in transit, with the most recent scan on November 12."
+      },
+      {
+        "source": "SELLER",
+        "point": "The order record shows tracking status Processing and no delivery date yet, and the seller's statement describes the item as shipped but not yet delivered."
+      },
+      {
+        "source": "SELLER",
+        "point": "The listing states the bag is customized with buyer-chosen artwork and has a No Refunds return policy."
+      }
+    ],
+    "evidenceGaps": [
+      "A current UPS tracking history or printout that shows the in-transit scans and the latest status.",
+      "Clarification of the seller statement, which says the item was delivered to the UPS sorting facility and is being prepared to ship, since that conflicts with the in-transit answer.",
+      "Proof that the bag was made to the buyer's custom artwork and specifications, such as the order design file or the buyer's chosen artwork."
+    ],
+    "alternatives": [
+      {
+        "action": "ACCEPT_CLAIM",
+        "whyNot": "The item is still in transit with the carrier and the buyer's reason is a change of mind, not a seller failure, so a refund is not yet warranted."
+      },
+      {
+        "action": "MAKE_OFFER",
+        "whyNot": "There is no evidence of a partial fault or a partial delivery, so a partial amount would not be grounded in the facts provided."
+      }
+    ],
+    "draftNote": "Regarding this dispute, the item was shipped via UPS on November 10, 2026 under tracking number UPS1002030040. The UPS tracking history shows the package left the UPS facility and is in transit, with the most recent scan on November 12. The bag is a customized item made to the buyer's chosen artwork, and the listing states it is non-refundable. We are providing the tracking details and are happy to share further carrier information so the delivery can be completed.",
+    "followUpQuestions": [],
+    "nextSteps": [
+      "Check the live UPS tracking for UPS1002030040 and save a copy of the full tracking history.",
+      "Confirm the shipping status and correct the order record if it still says Processing.",
+      "Gather the order design or artwork details showing the item was customized to the buyer's request.",
+      "Submit the UPS tracking evidence and the listing details to PayPal with your contest response."
+    ]
+  },
+  "usage": {
+    "inputTokens": 3329,
+    "inputTokenDetails": {
+      "noCacheTokens": 3329,
+      "cacheReadTokens": 0,
+      "cacheWriteTokens": 0
+    },
+    "outputTokens": 2419,
+    "outputTokenDetails": {
+      "textTokens": 1151,
+      "reasoningTokens": 1268
+    },
+    "totalTokens": 5748,
+    "raw": {
+      "input_tokens": 3329,
+      "output_tokens": 2419,
+      "output_tokens_details": {
+        "thinking_tokens": 1268
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  }
+}

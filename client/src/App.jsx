@@ -45,7 +45,7 @@ function App() {
       const res = await loadDisputes();
       if (cancelled) return;
       if (res.ok) {
-        setCards(res.data.disputes.filter((item) => { return typeof item.analysis === 'object' && !Array.isArray(item.analysis) && item.analysis !== null }));
+        setCards(res.data.disputes.filter((item) => { return typeof item.analysis === 'object' && !Array.isArray(item.analysis) && item.analysis !== null && !item.title.startsWith("Something") }));
         setMode(res.data.mode);
       } else {
         setError(res.data?.error ?? 'Could not load disputes.');
@@ -58,7 +58,7 @@ function App() {
 
   const refresh = useCallback(async () => {
     const res = await loadDisputes();
-    if (res.ok) { setCards(res.data.disputes.filter((item) => { return typeof item.analysis === 'object' && !Array.isArray(item.analysis) && item.analysis !== null })); setMode(res.data.mode); }
+    if (res.ok) { setCards(res.data.disputes.filter((item) => { return typeof item.analysis === 'object' && !Array.isArray(item.analysis) && item.analysis !== null && !item.title.startsWith("Something") })); setMode(res.data.mode); }
     else setError(res.data?.error ?? 'Could not load disputes.');
     setLoading(false);
   }, []);
@@ -86,6 +86,7 @@ function App() {
     const params = new URLSearchParams(window.location.search);
     const id = params.get('dispute');
     //console.log(id);
+    console.log(id);
     if (!id) return;
 
     // Clear the URL so a refresh doesn't trigger another AI call.
