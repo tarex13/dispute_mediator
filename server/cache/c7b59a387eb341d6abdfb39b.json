@@ -1,0 +1,88 @@
+{
+  "output": {
+    "action": "CONTEST",
+    "refundType": null,
+    "amount": null,
+    "sellerCaseStrength": "HIGH",
+    "reasoning": "Canada Post's tracking shows this order was delivered on 2026-10-19 with a signature on delivery, which is specific carrier evidence that the item reached the address. The buyer says nothing arrived, but their statement does not identify a different address or any carrier problem. Submit the tracking details and the signed delivery record to PayPal to contest this dispute.",
+    "evidenceUsed": [
+      {
+        "source": "SELLER",
+        "point": "Canada Post tracking number DEMO-CP-884201 shows status Delivered on 2026-10-19."
+      },
+      {
+        "source": "SELLER",
+        "point": "The order was marked as signed for on delivery."
+      },
+      {
+        "source": "SELLER",
+        "point": "The order shipped on 2026-10-14, two days after the 2026-10-12 order date."
+      },
+      {
+        "source": "BUYER",
+        "point": "The buyer says they never got the order and that nothing was delivered to their address."
+      },
+      {
+        "source": "BUYER",
+        "point": "The buyer says they asked neighbours and could not find a package, but did not name a different delivery address."
+      },
+      {
+        "source": "PAYPAL_DATA",
+        "point": "The dispute reason is merchandise or service not received, the amount is 85 CAD, and 12 days are left to respond."
+      }
+    ],
+    "evidenceGaps": [
+      "A signed delivery receipt or proof-of-delivery image from Canada Post showing the signature and delivery location.",
+      "Confirmation that the delivery address on the order matches the buyer's address on the PayPal account.",
+      "Any buyer communication before the dispute that mentions the package or delivery problems."
+    ],
+    "alternatives": [
+      {
+        "action": "ACCEPT_CLAIM",
+        "whyNot": "The carrier record shows delivery and a signature, so the seller has no admitted fault to support a full refund."
+      },
+      {
+        "action": "MAKE_OFFER",
+        "whyNot": "The evidence is not mixed, so a partial amount would pay for an item the carrier shows was delivered."
+      }
+    ],
+    "draftNote": "Regarding this dispute for order with tracking number DEMO-CP-884201: the item shipped on 2026-10-14 with Canada Post tracking and was marked delivered on 2026-10-19 with a signature on delivery. We are providing the tracking record and delivery confirmation and ask that the claim be reviewed on this evidence.",
+    "followUpQuestions": [],
+    "nextSteps": [
+      "Download the Canada Post delivery confirmation and signed proof of delivery for tracking number DEMO-CP-884201.",
+      "Confirm the delivery address on the order matches the buyer's PayPal address.",
+      "Upload the tracking record and proof of delivery as evidence in PayPal within the response window.",
+      "Keep a copy of the shipping label and order confirmation in case PayPal requests more records."
+    ]
+  },
+  "usage": {
+    "inputTokens": 3209,
+    "inputTokenDetails": {
+      "noCacheTokens": 3209,
+      "cacheReadTokens": 0,
+      "cacheWriteTokens": 0
+    },
+    "outputTokens": 1416,
+    "outputTokenDetails": {
+      "textTokens": 920,
+      "reasoningTokens": 496
+    },
+    "totalTokens": 4625,
+    "raw": {
+      "input_tokens": 3209,
+      "output_tokens": 1416,
+      "output_tokens_details": {
+        "thinking_tokens": 496
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  }
+}

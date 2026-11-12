@@ -7,6 +7,7 @@ const rows = fs
   .map((f) => {
     const dispute = JSON.parse(fs.readFileSync(`fixtures/${f}`, 'utf8'));
     const a = analyzeDispute(dispute);
+    if(!a.reason) return;
     return {
       file: f,
       reason: a.reason,

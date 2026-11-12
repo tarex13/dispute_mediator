@@ -5,7 +5,6 @@ audit.log
 dispute-raw*.json
 assets/
 public/
-cache/
 fixtures/
 decisions.md
 readme.md

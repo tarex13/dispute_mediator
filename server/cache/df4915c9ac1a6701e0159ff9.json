@@ -1,0 +1,76 @@
+{
+  "output": {
+    "action": "ACCEPT_CLAIM",
+    "refundType": "REFUND",
+    "amount": null,
+    "sellerCaseStrength": "LOW",
+    "reasoning": "The buyer reports that the item stopped working after receiving it, which is a plausible 'not as described' problem. PayPal's data also shows that contesting with evidence is not available for this dispute, and no order, listing, or seller statement was provided to show otherwise. Accepting with a full refund of 10 CAD is the quickest fair way to close this dispute.",
+    "evidenceUsed": [
+      {
+        "source": "BUYER",
+        "point": "The buyer says the item they received stopped functioning."
+      },
+      {
+        "source": "PAYPAL_DATA",
+        "point": "The dispute reason is merchandise or service not as described, for 10 CAD."
+      },
+      {
+        "source": "PAYPAL_DATA",
+        "point": "PayPal reports that this dispute cannot be contested with evidence."
+      }
+    ],
+    "evidenceGaps": [
+      "The order details, including what was purchased and when it shipped.",
+      "The listing description and any warranty or return policy shown at the time of sale.",
+      "The seller's account of the item's condition when it was shipped.",
+      "Any notes on whether the item had been used or tested before shipping."
+    ],
+    "alternatives": [
+      {
+        "action": "MAKE_OFFER",
+        "whyNot": "Without the listing or order details, there is no basis to set a fair partial amount, and the buyer's functional defect claim is credible."
+      },
+      {
+        "action": "CONTEST",
+        "whyNot": "PayPal reports that contesting with evidence is not available for this dispute, and no supporting records were provided."
+      }
+    ],
+    "draftNote": "Thank you for reaching out about this dispute. We are sorry the item stopped working after you received it. We are accepting the claim and issuing a full refund of 10 CAD for this dispute.",
+    "followUpQuestions": [],
+    "nextSteps": [
+      "Accept the claim in PayPal and issue a full refund of 10 CAD.",
+      "Confirm the refund appears in the buyer's account.",
+      "Review your listing and return policy so future product descriptions clearly state any known issues or warranty terms."
+    ]
+  },
+  "usage": {
+    "inputTokens": 2974,
+    "inputTokenDetails": {
+      "noCacheTokens": 2974,
+      "cacheReadTokens": 0,
+      "cacheWriteTokens": 0
+    },
+    "outputTokens": 1616,
+    "outputTokenDetails": {
+      "textTokens": 674,
+      "reasoningTokens": 942
+    },
+    "totalTokens": 4590,
+    "raw": {
+      "input_tokens": 2974,
+      "output_tokens": 1616,
+      "output_tokens_details": {
+        "thinking_tokens": 942
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  }
+}

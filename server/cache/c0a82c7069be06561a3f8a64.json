@@ -1,0 +1,79 @@
+{
+  "output": {
+    "action": "ACCEPT_CLAIM",
+    "refundType": "REFUND",
+    "amount": null,
+    "sellerCaseStrength": "LOW",
+    "reasoning": "Your records show the lamp shipped on October 14 with Purolator tracking, but the carrier has not scanned it since October 17 and there is no delivery date or signature. Without proof that the buyer received it, a contest would be hard to win, so a full refund of 120 CAD is the fastest fair outcome. You can still keep the shipping record in case the carrier later reports delivery.",
+    "evidenceUsed": [
+      {
+        "source": "SELLER",
+        "point": "Order shipped 2026-10-14 via Purolator with tracking number DEMO-PU-771204."
+      },
+      {
+        "source": "SELLER",
+        "point": "Tracking status is in transit with no scan since 2026-10-17; no delivery date or signature on record."
+      },
+      {
+        "source": "BUYER",
+        "point": "Buyer states tracking has not moved for two weeks and asks for a refund or the item."
+      },
+      {
+        "source": "PAYPAL_DATA",
+        "point": "Dispute reason is merchandise not received for 120 CAD, the full disputed amount."
+      }
+    ],
+    "evidenceGaps": [
+      "Purolator trace or investigation result for the package",
+      "Any proof of delivery such as a signed receipt or delivery confirmation",
+      "Confirmation that the buyer's shipping address matched the order"
+    ],
+    "alternatives": [
+      {
+        "action": "MAKE_OFFER",
+        "whyNot": "A partial offer is hard to justify because there is no delivery evidence to split the loss against."
+      },
+      {
+        "action": "CONTEST",
+        "whyNot": "Contesting needs proof of delivery, and the only proof available is shipment, which does not show the buyer received the item."
+      }
+    ],
+    "draftNote": "Regarding this dispute, we shipped the item on 2026-10-14 via Purolator under tracking number DEMO-PU-771204. The carrier has not scanned the package since 2026-10-17, and we do not have delivery confirmation. We accept this claim and will issue a full refund of 120 CAD. Thank you for your patience.",
+    "followUpQuestions": [],
+    "nextSteps": [
+      "Issue a full refund of 120 CAD through PayPal for this dispute.",
+      "Keep the Purolator shipping record and tracking history on file.",
+      "If Purolator later reports delivery, share that record with PayPal promptly."
+    ]
+  },
+  "usage": {
+    "inputTokens": 3191,
+    "inputTokenDetails": {
+      "noCacheTokens": 3191,
+      "cacheReadTokens": 0,
+      "cacheWriteTokens": 0
+    },
+    "outputTokens": 2050,
+    "outputTokenDetails": {
+      "textTokens": 766,
+      "reasoningTokens": 1284
+    },
+    "totalTokens": 5241,
+    "raw": {
+      "input_tokens": 3191,
+      "output_tokens": 2050,
+      "output_tokens_details": {
+        "thinking_tokens": 1284
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  }
+}

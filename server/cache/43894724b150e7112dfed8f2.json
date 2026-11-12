@@ -1,0 +1,78 @@
+{
+  "output": {
+    "action": "ACCEPT_CLAIM",
+    "refundType": "REFUND",
+    "amount": null,
+    "sellerCaseStrength": "LOW",
+    "reasoning": "The seller admits the item was never shipped because it was on backorder, and the seller did not tell the buyer. Since there is no tracking, delivery record, or other proof that the item was sent, the buyer's claim is credible and a contest would likely fail. Offering a full refund now is the fastest fair outcome for both sides.",
+    "evidenceUsed": [
+      {
+        "source": "PAYPAL_DATA",
+        "point": "The dispute reason is merchandise or service not received, for a disputed amount of 42 CAD."
+      },
+      {
+        "source": "SELLER",
+        "point": "The order shows no shipped date, carrier, tracking number, or delivery date."
+      },
+      {
+        "source": "SELLER",
+        "point": "The seller states the item was on backorder, has not been shipped, and the buyer was not told."
+      },
+      {
+        "source": "BUYER",
+        "point": "The buyer reports no tracking number, no updates, and no reply to messages."
+      }
+    ],
+    "evidenceGaps": [
+      "Any record of a backorder notice or message sent to the buyer before the dispute",
+      "Whether the seller has a confirmed shipping date for the item"
+    ],
+    "alternatives": [
+      {
+        "action": "CONTEST",
+        "whyNot": "The seller has no delivery or shipment evidence and admits the item was not shipped, so a contest would likely be lost."
+      },
+      {
+        "action": "MAKE_OFFER",
+        "whyNot": "The item was never shipped, so there is no partly valid point to split. A partial amount would not be fair to the buyer."
+      }
+    ],
+    "draftNote": "Regarding this dispute, the item was on backorder and has not been shipped. I apologize for not informing the buyer about the delay. I am accepting the claim and issuing a full refund of 42 CAD.",
+    "followUpQuestions": [],
+    "nextSteps": [
+      "Accept the claim and issue a full refund of 42 CAD through PayPal.",
+      "Cancel the order in your records and update the listing's stock status.",
+      "Contact the buyer to apologize for the missed update if you have not already."
+    ]
+  },
+  "usage": {
+    "inputTokens": 3150,
+    "inputTokenDetails": {
+      "noCacheTokens": 3150,
+      "cacheReadTokens": 0,
+      "cacheWriteTokens": 0
+    },
+    "outputTokens": 678,
+    "outputTokenDetails": {
+      "textTokens": 678,
+      "reasoningTokens": 0
+    },
+    "totalTokens": 3828,
+    "raw": {
+      "input_tokens": 3150,
+      "output_tokens": 678,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  }
+}

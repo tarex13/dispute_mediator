@@ -20,7 +20,7 @@ export function analyzeDispute(dispute, now = new Date()) {
   const daysLeft = dueDateString ? Math.ceil((new Date(dueDateString) - now) / DAY_MS) : null;
   let urgency = 'normal';
   if(daysLeft == null){
-    return dispute.disputed_transactions.transaction_status;
+    return dispute.disputed_transactions.transaction_status || dispute.status;
     }
   if (daysLeft <= 0) urgency = 'overdue';
   else if (daysLeft <= 3) urgency = 'critical';

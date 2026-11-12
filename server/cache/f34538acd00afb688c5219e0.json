@@ -1,0 +1,87 @@
+{
+  "output": {
+    "action": "NEED_MORE_INFO",
+    "refundType": null,
+    "amount": null,
+    "sellerCaseStrength": "LOW",
+    "reasoning": "The buyer reports that the greeting card set was not received, and your records show no shipped date, carrier, or tracking number. Whether the order was shipped is the deciding fact, so please answer the questions below before choosing a response. If the order was not shipped, a full refund is the fairest outcome; if it was shipped, the tracking evidence may let you contest.",
+    "evidenceUsed": [
+      {
+        "source": "PAYPAL_DATA",
+        "point": "The dispute reason is merchandise or service not received, and the disputed amount is 30 CAD."
+      },
+      {
+        "source": "BUYER",
+        "point": "The buyer's only message on PayPal says: Did not receive."
+      },
+      {
+        "source": "SELLER",
+        "point": "The order record shows no shipped date, carrier, tracking number, or delivery status."
+      }
+    ],
+    "evidenceGaps": [
+      "Proof that the order was shipped, such as a carrier name and tracking number.",
+      "Proof of delivery, such as a carrier delivery scan or signed delivery receipt.",
+      "The seller's account of what happened after the order was placed."
+    ],
+    "alternatives": [
+      {
+        "action": "ACCEPT_CLAIM",
+        "whyNot": "This may be the right outcome if the order was never shipped, but the records do not yet confirm that, so it should wait for your answer."
+      },
+      {
+        "action": "CONTEST",
+        "whyNot": "Contesting needs specific delivery evidence, and none is recorded in the data provided."
+      }
+    ],
+    "draftNote": "Thank you for raising this dispute. We are reviewing the order details for this dispute and will respond with our next steps shortly.",
+    "followUpQuestions": [
+      {
+        "id": "q1",
+        "question": "Did you ship this order? Answer yes or no.",
+        "answerType": "yes_no"
+      },
+      {
+        "id": "q2",
+        "question": "If you shipped it, what carrier and tracking number did you use, and what is the latest tracking status?",
+        "answerType": "text"
+      }
+    ],
+    "nextSteps": [
+      "Answer the follow-up questions with your shipping records.",
+      "If the order was not shipped, choose ACCEPT_CLAIM and issue a full refund of 30 CAD.",
+      "If the order was shipped and the carrier shows delivery, gather the tracking or signed receipt and consider contesting.",
+      "Respond well before the 12 days left in this dispute."
+    ]
+  },
+  "usage": {
+    "inputTokens": 3084,
+    "inputTokenDetails": {
+      "noCacheTokens": 3084,
+      "cacheReadTokens": 0,
+      "cacheWriteTokens": 0
+    },
+    "outputTokens": 1589,
+    "outputTokenDetails": {
+      "textTokens": 768,
+      "reasoningTokens": 821
+    },
+    "totalTokens": 4673,
+    "raw": {
+      "input_tokens": 3084,
+      "output_tokens": 1589,
+      "output_tokens_details": {
+        "thinking_tokens": 821
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  }
+}

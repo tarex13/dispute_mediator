@@ -4,7 +4,7 @@ import DisputeGrid from './DisputeGrid';
 import { ACTION_LABELS, money, recSummary } from './labels';
 import RecommendationPanel from './RecommendationPanel';
 
-import { useRef } from 'react'; 
+import { useRef } from 'react';
 
 const BLUE = '#009CDE';
 
@@ -25,6 +25,8 @@ function App() {
   const [cards, setCards] = useState([]);         // DisputeCard[]
   const [selectedCard, setSelectedCard] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [slow, setSlow] = useState(false);
+  const [showGuide, setShowGuide] = useState(true);
   const [error, setError] = useState(null);
   const [selectedId, setSelectedId] = useState(null);
   const [recs, setRecs] = useState({});           // dispute id -> recommendation object
@@ -43,7 +45,7 @@ function App() {
       const res = await loadDisputes();
       if (cancelled) return;
       if (res.ok) {
-        setCards(res.data.disputes.filter((item)=> {return typeof item.analysis === 'object' && !Array.isArray(item.analysis) && item.analysis !== null}));
+        setCards(res.data.disputes.filter((item) => { return typeof item.analysis === 'object' && !Array.isArray(item.analysis) && item.analysis !== null }));
         setMode(res.data.mode);
       } else {
         setError(res.data?.error ?? 'Could not load disputes.');
@@ -56,11 +58,11 @@ function App() {
 
   const refresh = useCallback(async () => {
     const res = await loadDisputes();
-    if (res.ok) { setCards(res.data.disputes.filter((item)=> {return typeof item.analysis === 'object' && !Array.isArray(item.analysis) && item.analysis !== null})); setMode(res.data.mode); }
+    if (res.ok) { setCards(res.data.disputes.filter((item) => { return typeof item.analysis === 'object' && !Array.isArray(item.analysis) && item.analysis !== null })); setMode(res.data.mode); }
     else setError(res.data?.error ?? 'Could not load disputes.');
     setLoading(false);
   }, []);
-  
+
   // One place that asks the agent for a recommendation. The panel's button will call this too.
   const generate = useCallback(async (id, followUpAnswers) => {
     //console.log("hello");
@@ -83,7 +85,7 @@ function App() {
 
     const params = new URLSearchParams(window.location.search);
     const id = params.get('dispute');
-    console.log(id);
+    //console.log(id);
     if (!id) return;
 
     // Clear the URL so a refresh doesn't trigger another AI call.
@@ -112,7 +114,7 @@ function App() {
     if (result.mode === 'live') refresh(); // pick up the dispute's new status from PayPal
   }, [refresh]);
 
-  
+
   const handleContextSaved = useCallback((id, context) => {
     setCards((p) => p.map((c) => (c.id === id ? { ...c, context } : c)));
     setRecs((p) => { const next = { ...p }; delete next[id]; return next; });
@@ -141,6 +143,12 @@ function App() {
     };
   }, [cards]);
 
+  useEffect(() => {
+    if (!loading) return;
+    const t = setTimeout(() => setSlow(true), 4000);
+    return () => clearTimeout(t);
+  }, [loading]);
+
   const selected = cards.find((c) => c.id === selectedId);
 
   return (
@@ -158,7 +166,22 @@ function App() {
           )}
         </div>
       </header>
-
+      {mode === 'demo' && showGuide && (
+        <div className="mb-6 rounded-lg border border-[#009CDE]/40 bg-[#009CDE]/10 p-4 text-sm text-slate-200">
+          <div className="flex items-start justify-between gap-4">
+            <div>
+              <div className="font-semibold text-white">Judge's guide: 3 steps, no setup needed</div>
+              <ol className="mt-2 list-decimal space-y-1 pl-5">
+                <li>Click any dispute in the table. A saved agent recommendation appears below it.</li>
+                <li>Read the reasoning, then edit the amount or note. Try an amount that is too high to see the safety check.</li>
+                <li>Click Approve, then Confirm. In demo mode nothing is sent to PayPal, and the server still re-validates everything.</li>
+              </ol>
+              <p className="mt-2 text-xs text-slate-400">Sample disputes with saved AI answers. Live mode (real sandbox, real AI calls) is shown in the video and described in the README.</p>
+            </div>
+            <button type="button" onClick={() => setShowGuide(false)} aria-label="Dismiss guide" className="text-slate-400 hover:text-white">✕</button>
+          </div>
+        </div>
+      )}
       <main className="mx-auto max-w-7xl px-4 py-6">
         <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
           <StatTile label="Needs your action" value={stats.needAction} accent={BLUE} />
@@ -175,7 +198,12 @@ function App() {
           <div className="mb-2 flex justify-end text-xs text-slate-400">
             {mode === 'demo' ? 'Click a dispute to see the agent’s suggestion' : 'Click a dispute to open it'}
           </div>
-          {loading && <p className="py-10 text-center text-slate-400">Loading disputes…</p>}
+          {loading && (
+            <div className="py-10 text-center text-slate-400">
+              <p>Loading disputes…</p>
+              {slow && <p className="mt-2 text-sm text-slate-500">The demo runs on a free tier and may be waking up. This can take up to a minute.</p>}
+            </div>
+          )}
           {error && (
             <div role="alert" className="rounded-lg bg-red-500/10 p-4 text-red-300">
               {error} Is the API running on port 3000?

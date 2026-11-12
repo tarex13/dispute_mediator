@@ -1,0 +1,78 @@
+{
+  "output": {
+    "action": "ACCEPT_CLAIM",
+    "refundType": "REFUND",
+    "amount": null,
+    "sellerCaseStrength": "LOW",
+    "reasoning": "You can show the order shipped with Purolator tracking, but the carrier has no delivery confirmation and no scan since October 17. Without proof that the lamp was delivered, the buyer's claim that it never arrived is likely to succeed if contested. Issuing a full refund now avoids a longer dispute and ends the wait for the buyer.",
+    "evidenceUsed": [
+      {
+        "source": "SELLER",
+        "point": "Item shipped on 2026-10-14 via Purolator with tracking number DEMO-PU-771204."
+      },
+      {
+        "source": "PAYPAL_DATA",
+        "point": "Tracking status is 'In transit, no scan since 2026-10-17' and no delivery date is recorded."
+      },
+      {
+        "source": "PAYPAL_DATA",
+        "point": "No signature on delivery is recorded."
+      },
+      {
+        "source": "BUYER",
+        "point": "Buyer reports the package never arrived and tracking has not moved for about two weeks."
+      }
+    ],
+    "evidenceGaps": [
+      "Carrier confirmation of delivery or a signed delivery receipt, which would support a contest.",
+      "Any carrier trace or investigation result explaining the stalled shipment."
+    ],
+    "alternatives": [
+      {
+        "action": "MAKE_OFFER",
+        "whyNot": "A partial offer would only make sense if delivery were partly confirmed, and no delivery evidence is currently available."
+      },
+      {
+        "action": "CONTEST",
+        "whyNot": "Shipping proof alone does not show delivery, and the seller has no delivery evidence to submit."
+      }
+    ],
+    "draftNote": "We are sorry the order has not arrived. Our records show the item shipped on 2026-10-14 with Purolator tracking DEMO-PU-771204, but the carrier has no scan since 2026-10-17 and no delivery confirmation. We accept the claim and will issue a full refund of 120 CAD.",
+    "followUpQuestions": [],
+    "nextSteps": [
+      "Issue a full refund of 120 CAD through PayPal.",
+      "Keep the tracking record and shipping receipt in case the buyer or PayPal asks for them later.",
+      "If the package is later delivered or found, contact PayPal before the case closes to share the new information."
+    ]
+  },
+  "usage": {
+    "inputTokens": 3077,
+    "inputTokenDetails": {
+      "noCacheTokens": 3077,
+      "cacheReadTokens": 0,
+      "cacheWriteTokens": 0
+    },
+    "outputTokens": 1958,
+    "outputTokenDetails": {
+      "textTokens": 742,
+      "reasoningTokens": 1216
+    },
+    "totalTokens": 5035,
+    "raw": {
+      "input_tokens": 3077,
+      "output_tokens": 1958,
+      "output_tokens_details": {
+        "thinking_tokens": 1216
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  }
+}

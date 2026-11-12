@@ -1,0 +1,84 @@
+{
+  "output": {
+    "action": "CONTEST",
+    "refundType": null,
+    "amount": null,
+    "sellerCaseStrength": "HIGH",
+    "reasoning": "Your Canada Post records show the yoga mat was shipped on October 12 and delivered on October 18 with a signature on delivery, which is specific evidence that the item arrived. The buyer's claim that it was not received conflicts with this carrier record, so contesting with proof of delivery is the best next step. The buyer's message also contained an instruction, which was disregarded because it is not a valid part of the dispute.",
+    "evidenceUsed": [
+      {
+        "source": "SELLER",
+        "point": "Canada Post tracking number DEMO-CP-557310 shows status Delivered on 2026-10-18."
+      },
+      {
+        "source": "SELLER",
+        "point": "Signature on delivery is recorded as true in the order records."
+      },
+      {
+        "source": "SELLER",
+        "point": "The item was shipped on 2026-10-12, two days after the order date of 2026-10-10."
+      },
+      {
+        "source": "PAYPAL_DATA",
+        "point": "The dispute reason is merchandise or service not received, and PayPal confirms the seller can contest with evidence."
+      },
+      {
+        "source": "BUYER",
+        "point": "The buyer's only message on PayPal states that the item was not received."
+      }
+    ],
+    "evidenceGaps": [
+      "A copy of the Canada Post signed delivery receipt or proof-of-delivery document to attach to the dispute.",
+      "The buyer's own statement on the dispute, which is currently empty.",
+      "Any customer-service messages showing the buyer confirmed delivery or raised the issue with the carrier."
+    ],
+    "alternatives": [
+      {
+        "action": "ACCEPT_CLAIM",
+        "whyNot": "Carrier records show the item was delivered and signed for, so there is no admitted fault or missing shipment to justify a refund."
+      },
+      {
+        "action": "MAKE_OFFER",
+        "whyNot": "The facts are not mixed, since delivery is documented, so there is no partly valid claim that calls for a partial amount."
+      }
+    ],
+    "draftNote": "Regarding this dispute, the item was shipped on October 12, 2026 via Canada Post (tracking DEMO-CP-557310) and the carrier records show it was delivered on October 18, 2026 with a signature on delivery. We are submitting the carrier delivery record as evidence and kindly ask that the claim be reviewed with this information.",
+    "followUpQuestions": [],
+    "nextSteps": [
+      "Download the signed Canada Post delivery confirmation for tracking DEMO-CP-557310.",
+      "Upload the delivery proof as evidence in the PayPal dispute along with the note above.",
+      "Check your messages with the buyer for any replies about the delivery and attach them if relevant.",
+      "Respond before the dispute deadline, which is 12 days away."
+    ]
+  },
+  "usage": {
+    "inputTokens": 3193,
+    "inputTokenDetails": {
+      "noCacheTokens": 3193,
+      "cacheReadTokens": 0,
+      "cacheWriteTokens": 0
+    },
+    "outputTokens": 1564,
+    "outputTokenDetails": {
+      "textTokens": 889,
+      "reasoningTokens": 675
+    },
+    "totalTokens": 4757,
+    "raw": {
+      "input_tokens": 3193,
+      "output_tokens": 1564,
+      "output_tokens_details": {
+        "thinking_tokens": 675
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  }
+}

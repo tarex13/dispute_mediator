@@ -1,0 +1,83 @@
+{
+  "output": {
+    "action": "ACCEPT_CLAIM",
+    "refundType": "REFUND",
+    "amount": null,
+    "sellerCaseStrength": "LOW",
+    "reasoning": "The buyer says the Custom Built PC was never shipped, and your records show no shipping date, carrier, or tracking number, so you cannot prove delivery. Your refund policy for custom builds is not shown on your website, so a buyer would not be expected to know it, which weakens a contest. Accepting with a full refund is the fastest fair outcome, and it avoids spending more time on a case that is likely to be decided against you.",
+    "evidenceUsed": [
+      {
+        "source": "PAYPAL_DATA",
+        "point": "The dispute reason is merchandise or service not received, for a disputed amount of 2500 CAD."
+      },
+      {
+        "source": "BUYER",
+        "point": "The buyer says they no longer need the product after seeing a review, and that they do not believe the product has shipped."
+      },
+      {
+        "source": "SELLER",
+        "point": "The seller states that no shipping has been done yet for this order."
+      },
+      {
+        "source": "SELLER",
+        "point": "The order record has no shipped date, carrier, tracking number, tracking status, or delivery date."
+      },
+      {
+        "source": "SELLER",
+        "point": "The refund policy for custom builds is not shown on the website, so the buyer may not have been informed of it."
+      }
+    ],
+    "evidenceGaps": [
+      "Any record of the custom build costs already incurred, which would support a partial amount if you ever needed to offer one.",
+      "Any written agreement or message where the buyer accepted the custom build's no-refund terms before purchase."
+    ],
+    "alternatives": [
+      {
+        "action": "MAKE_OFFER",
+        "whyNot": "No build cost records were provided, so there is no factual basis for a fair partial amount, and the buyer's claim that nothing shipped is supported by your own records."
+      },
+      {
+        "action": "CONTEST",
+        "whyNot": "You have no tracking, delivery proof, or disclosed refund policy to submit, so a contest would likely fail and cost more time."
+      }
+    ],
+    "draftNote": "Regarding this dispute, we have reviewed the order and confirm that the Custom Built PC has not yet been shipped. We are accepting the claim and issuing a full refund of 2500 CAD. Thank you for your patience.",
+    "followUpQuestions": [],
+    "nextSteps": [
+      "Issue a full refund of 2500 CAD through PayPal for this dispute.",
+      "Confirm the refund appears in the buyer's account and that the dispute is closed.",
+      "Add a clear refund and custom build policy to your website and product listings before taking future custom orders.",
+      "Review your payment and cancellation process so that orders not yet started can be cancelled easily."
+    ]
+  },
+  "usage": {
+    "inputTokens": 3260,
+    "inputTokenDetails": {
+      "noCacheTokens": 3260,
+      "cacheReadTokens": 0,
+      "cacheWriteTokens": 0
+    },
+    "outputTokens": 1696,
+    "outputTokenDetails": {
+      "textTokens": 852,
+      "reasoningTokens": 844
+    },
+    "totalTokens": 4956,
+    "raw": {
+      "input_tokens": 3260,
+      "output_tokens": 1696,
+      "output_tokens_details": {
+        "thinking_tokens": 844
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  }
+}

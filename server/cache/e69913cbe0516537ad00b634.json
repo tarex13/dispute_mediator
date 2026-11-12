@@ -1,0 +1,76 @@
+{
+  "output": {
+    "action": "ACCEPT_CLAIM",
+    "refundType": "REFUND",
+    "amount": null,
+    "sellerCaseStrength": "LOW",
+    "reasoning": "You have confirmed that the item was never shipped, and there is no tracking or delivery evidence to contest the buyer's claim. The fairest and quickest path is to issue a full refund of 42 CAD so the buyer is made whole and the dispute closes without a fight.",
+    "evidenceUsed": [
+      {
+        "source": "SELLER",
+        "point": "The seller states the item was on backorder and has not been shipped."
+      },
+      {
+        "source": "PAYPAL_DATA",
+        "point": "The dispute reason is merchandise or service not received, and the disputed amount is 42 CAD."
+      },
+      {
+        "source": "PAYPAL_DATA",
+        "point": "Order record shows no shipped date, carrier, tracking number, or delivery date."
+      },
+      {
+        "source": "BUYER",
+        "point": "The buyer reports no tracking number, no updates, and no reply to messages."
+      }
+    ],
+    "evidenceGaps": [],
+    "alternatives": [
+      {
+        "action": "CONTEST",
+        "whyNot": "The seller has no proof of shipment or delivery, so a contest would likely fail."
+      },
+      {
+        "action": "MAKE_OFFER",
+        "whyNot": "The item was never shipped, so the buyer has no partial benefit to compensate for and a partial amount is not justified."
+      }
+    ],
+    "draftNote": "Thank you for your patience. The item was on backorder and had not yet shipped, and I did not notify you of the delay, which I apologize for. I am issuing a full refund of 42 CAD for this order.",
+    "followUpQuestions": [],
+    "nextSteps": [
+      "Issue a full refund of 42 CAD through PayPal.",
+      "Confirm the refund appears in the buyer's account and the dispute is closed.",
+      "Cancel the backordered order on your side so it is not fulfilled later.",
+      "Notify buyers of backorder delays promptly in the future."
+    ]
+  },
+  "usage": {
+    "inputTokens": 3036,
+    "inputTokenDetails": {
+      "noCacheTokens": 3036,
+      "cacheReadTokens": 0,
+      "cacheWriteTokens": 0
+    },
+    "outputTokens": 624,
+    "outputTokenDetails": {
+      "textTokens": 624,
+      "reasoningTokens": 0
+    },
+    "totalTokens": 3660,
+    "raw": {
+      "input_tokens": 3036,
+      "output_tokens": 624,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  }
+}

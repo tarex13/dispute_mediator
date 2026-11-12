@@ -1,0 +1,84 @@
+{
+  "output": {
+    "action": "MAKE_OFFER",
+    "refundType": "REFUND",
+    "amount": 60,
+    "sellerCaseStrength": "MEDIUM",
+    "reasoning": "The listing disclosed minor sleeve scuffs and the photos show them, so that part of the complaint is not a seller fault. The buyer also reports a worn collar, which was not mentioned in the listing or photographed, so the buyer has a partly valid point. Offering a partial refund of 60 CAD settles the undisclosed collar wear quickly without refunding the full amount for a pre-owned item that was described as having scuffs.",
+    "evidenceUsed": [
+      {
+        "source": "SELLER",
+        "point": "The listing described the jacket as pre-owned in good condition with minor scuffs on the sleeves and referred buyers to photos."
+      },
+      {
+        "source": "SELLER",
+        "point": "The seller's statement says the listing photos show the sleeve scuffs and the collar was not photographed."
+      },
+      {
+        "source": "BUYER",
+        "point": "The buyer says there are scuffs on both sleeves and a worn collar."
+      },
+      {
+        "source": "PAYPAL_DATA",
+        "point": "The buyer's PayPal message says the jacket has visible scratches and wear and is not as described."
+      },
+      {
+        "source": "SELLER",
+        "point": "Canada Post tracking shows the order was delivered on 2026-10-20 with no signature on delivery."
+      }
+    ],
+    "evidenceGaps": [
+      "Photos or notes showing the collar condition at the time of sale.",
+      "Whether the buyer wore the jacket, which affects the listing's 14-day unworn return policy.",
+      "Any written description or inspection notes beyond the listing text, such as a condition checklist."
+    ],
+    "alternatives": [
+      {
+        "action": "CONTEST",
+        "whyNot": "The collar wear is not documented in the listing or photos, so the seller lacks specific evidence to defend the full claim."
+      },
+      {
+        "action": "ACCEPT_CLAIM",
+        "whyNot": "The sleeve scuffs were disclosed in the listing and photos, so a full refund would overpay for the part the seller did disclose."
+      }
+    ],
+    "draftNote": "Regarding this dispute, the listing described this pre-owned leather jacket as good condition with minor sleeve scuffs and referred to photos showing them. The buyer has raised a concern about a worn collar, which was not shown in the listing photos. To resolve this, we are offering a partial refund of 60 CAD. We are glad to discuss this further.",
+    "followUpQuestions": [],
+    "nextSteps": [
+      "Review the offer of 60 CAD against the collar concern and the listing text before submitting.",
+      "Submit the offer through PayPal with a short note explaining the basis for the amount.",
+      "Keep the listing, photos, and Canada Post tracking record on file in case the buyer declines the offer.",
+      "Check whether the buyer accepts the offer before the dispute window closes."
+    ]
+  },
+  "usage": {
+    "inputTokens": 3245,
+    "inputTokenDetails": {
+      "noCacheTokens": 3245,
+      "cacheReadTokens": 0,
+      "cacheWriteTokens": 0
+    },
+    "outputTokens": 1589,
+    "outputTokenDetails": {
+      "textTokens": 919,
+      "reasoningTokens": 670
+    },
+    "totalTokens": 4834,
+    "raw": {
+      "input_tokens": 3245,
+      "output_tokens": 1589,
+      "output_tokens_details": {
+        "thinking_tokens": 670
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  }
+}

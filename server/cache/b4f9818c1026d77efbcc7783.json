@@ -1,0 +1,83 @@
+{
+  "output": {
+    "action": "ACCEPT_CLAIM",
+    "refundType": "REFUND_WITH_RETURN",
+    "amount": null,
+    "sellerCaseStrength": "LOW",
+    "reasoning": "Your records show you shipped a large instead of the medium the buyer ordered, and the buyer's account matches that. Since the seller's own records confirm the error, contesting would likely fail, so accepting the claim is the quickest fair outcome. Asking the buyer to return the wrong item lets you recover it and send the correct size or restock it.",
+    "evidenceUsed": [
+      {
+        "source": "SELLER",
+        "point": "Seller states that after checking records, a large was shipped by mistake."
+      },
+      {
+        "source": "BUYER",
+        "point": "Buyer states the tag says L, they ordered M, and the item does not fit."
+      },
+      {
+        "source": "PAYPAL_DATA",
+        "point": "Buyer reports ordering a medium and receiving a large; the dispute reason is merchandise not as described for CAD 60."
+      },
+      {
+        "source": "SELLER",
+        "point": "Order is for a cotton hoodie size M at CAD 60, shipped via Canada Post and marked delivered on 2026-10-22."
+      },
+      {
+        "source": "SELLER",
+        "point": "Listing states a return policy of returns accepted within 14 days."
+      }
+    ],
+    "evidenceGaps": [
+      "Photo of the size tag or the item as received, if the buyer can provide one.",
+      "Confirmation of the buyer's return address and whether the buyer will ship the item back."
+    ],
+    "alternatives": [
+      {
+        "action": "CONTEST",
+        "whyNot": "The seller has already admitted the wrong size was shipped, so there is no evidence to support a contest."
+      },
+      {
+        "action": "MAKE_OFFER",
+        "whyNot": "The buyer's claim is fully valid, so a partial amount would not be a fair resolution."
+      }
+    ],
+    "draftNote": "For this dispute, I checked my records and confirmed that a large hoodie was shipped in error instead of the medium that was ordered. I accept the claim and will issue a refund. I would like the item returned so the correct size can be sent or the item can be restocked. I will follow up with return instructions.",
+    "followUpQuestions": [],
+    "nextSteps": [
+      "Send the buyer return instructions and confirm the return address.",
+      "Issue the refund for the full CAD 60 once the return is arranged, as required by the refund type.",
+      "When the item arrives back, inspect it and confirm it is the large that was shipped.",
+      "Ship the correct medium if the buyer still wants one, and update your packing checks to prevent future size errors."
+    ]
+  },
+  "usage": {
+    "inputTokens": 3210,
+    "inputTokenDetails": {
+      "noCacheTokens": 3210,
+      "cacheReadTokens": 0,
+      "cacheWriteTokens": 0
+    },
+    "outputTokens": 1799,
+    "outputTokenDetails": {
+      "textTokens": 813,
+      "reasoningTokens": 986
+    },
+    "totalTokens": 5009,
+    "raw": {
+      "input_tokens": 3210,
+      "output_tokens": 1799,
+      "output_tokens_details": {
+        "thinking_tokens": 986
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  }
+}

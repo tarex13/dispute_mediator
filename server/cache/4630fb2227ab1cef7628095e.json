@@ -1,0 +1,76 @@
+{
+  "output": {
+    "action": "ACCEPT_CLAIM",
+    "refundType": "REFUND",
+    "amount": null,
+    "sellerCaseStrength": "LOW",
+    "reasoning": "The buyer reports that the item stopped working, which is a plausible 'not as described' claim, and no seller records were provided to show the item was working or that the issue was disclosed. PayPal also indicates this dispute cannot be contested with evidence, so a full refund of 10 CAD is the quickest fair resolution. A full refund avoids further back-and-forth over a small amount.",
+    "evidenceUsed": [
+      {
+        "source": "PAYPAL_DATA",
+        "point": "The dispute reason is MERCHANDISE_OR_SERVICE_NOT_AS_DESCRIBED for 10 CAD."
+      },
+      {
+        "source": "PAYPAL_DATA",
+        "point": "PayPal indicates canContestWithEvidence is false for this dispute."
+      },
+      {
+        "source": "BUYER",
+        "point": "The buyer stated: The item I received stopped functioning."
+      }
+    ],
+    "evidenceGaps": [
+      "The original listing or product description, to check whether the item was described as working and whether any defect was disclosed.",
+      "Order details, including the item sold and the date it was shipped.",
+      "Proof of delivery or condition at shipment, such as photos or a packing record.",
+      "The seller's return policy, which PayPal may need if a return is requested."
+    ],
+    "alternatives": [
+      {
+        "action": "MAKE_OFFER",
+        "whyNot": "A partial offer would need a listing or record showing the defect was disclosed, and none was provided."
+      },
+      {
+        "action": "CONTEST",
+        "whyNot": "PayPal indicates this dispute cannot be contested with evidence, and no seller evidence was provided."
+      }
+    ],
+    "draftNote": "Regarding this dispute, we are sorry to hear the item stopped functioning after you received it. We are issuing a full refund of 10 CAD for this dispute.",
+    "followUpQuestions": [],
+    "nextSteps": [
+      "Issue a full refund of 10 CAD through PayPal for this dispute.",
+      "Confirm the refund is processed and keep a record of it.",
+      "Review your listing for this item so future descriptions state any known limitations clearly."
+    ]
+  },
+  "usage": {
+    "inputTokens": 2974,
+    "inputTokenDetails": {
+      "noCacheTokens": 2974,
+      "cacheReadTokens": 0,
+      "cacheWriteTokens": 0
+    },
+    "outputTokens": 1706,
+    "outputTokenDetails": {
+      "textTokens": 699,
+      "reasoningTokens": 1007
+    },
+    "totalTokens": 4680,
+    "raw": {
+      "input_tokens": 2974,
+      "output_tokens": 1706,
+      "output_tokens_details": {
+        "thinking_tokens": 1007
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  }
+}

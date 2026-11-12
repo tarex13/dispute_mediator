@@ -1,3 +1,5 @@
+// Please note that the mail functionality doesn't work on render (the production environment), but does locally
+
 import nodemailer from 'nodemailer';
 import { prepare } from '../../../lib/http.js';
 import { findRecord, nowFor } from '../../../lib/disputes.js';

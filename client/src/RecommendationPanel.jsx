@@ -93,7 +93,7 @@ function explainFailure(res) {
 export default function RecommendationPanel({
     card, rec, busy, error, approved, onGenerate, onApproved, onContextSaved,
 }) {
-    const [ctx, setCtx] = useState(() => initialCtx(card));
+    const [ctx, setCtx] = useState(() => initialCtx(card));// set context
     const [saveState, setSaveState] = useState(null); // null | 'saving' | 'saved' | 'error'
     const [amount, setAmount] = useState('');
     const [note, setNote] = useState('');

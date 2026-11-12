@@ -1,0 +1,84 @@
+{
+  "output": {
+    "action": "MAKE_OFFER",
+    "refundType": "REFUND",
+    "amount": 15,
+    "sellerCaseStrength": "LOW",
+    "reasoning": "The buyer says the speaker works well but has a small scratch that was not in the listing, and your listing said new in box. Since you did not notice the scratch when packing, a PayPal reviewer would likely side with the buyer on the condition issue, so contesting is unlikely to succeed. Offering a partial refund of CAD 15 lets the buyer keep a working speaker and compensates them for the cosmetic flaw without giving back the full price.",
+    "evidenceUsed": [
+      {
+        "source": "PAYPAL_DATA",
+        "point": "The buyer's message on PayPal says the speaker has a small scratch on the back and they want to keep it but get some money back."
+      },
+      {
+        "source": "BUYER",
+        "point": "The buyer states the speaker works perfectly and the scratch was not mentioned in the listing."
+      },
+      {
+        "source": "SELLER",
+        "point": "The listing describes the item as a new Bluetooth speaker in box."
+      },
+      {
+        "source": "SELLER",
+        "point": "The seller states they did not notice a scratch when packing the item."
+      },
+      {
+        "source": "SELLER",
+        "point": "Canada Post tracking shows the order was delivered on 2026-10-19 with no signature required."
+      }
+    ],
+    "evidenceGaps": [
+      "Photos or video of the speaker at the time it was packed, showing its condition",
+      "Any evidence that the scratch existed before shipping, such as packing records or inspection notes",
+      "Whether the buyer has sent photos of the scratch"
+    ],
+    "alternatives": [
+      {
+        "action": "ACCEPT_CLAIM",
+        "whyNot": "A full refund would return the full price for a working item with only a minor cosmetic flaw, which is more than the facts support."
+      },
+      {
+        "action": "CONTEST",
+        "whyNot": "The listing said new in box and the seller has no evidence that the item was undamaged, so the case would likely be lost."
+      }
+    ],
+    "draftNote": "Regarding this dispute, we have reviewed the buyer's report that the Bluetooth speaker works properly but has a small scratch on the back that was not in the listing. We are sorry for the disappointment and would like to resolve this quickly. We offer a partial refund of CAD 15.00 so the buyer can keep the speaker. Please let us know if you accept this offer.",
+    "followUpQuestions": [],
+    "nextSteps": [
+      "Send the partial refund offer of CAD 15.00 through this dispute.",
+      "If you have packing photos or notes, add them before the dispute deadline.",
+      "Review your listing so the condition of used or flawed items is clearly stated in future listings.",
+      "Allow the buyer time to respond to the offer before the dispute deadline."
+    ]
+  },
+  "usage": {
+    "inputTokens": 3231,
+    "inputTokenDetails": {
+      "noCacheTokens": 3231,
+      "cacheReadTokens": 0,
+      "cacheWriteTokens": 0
+    },
+    "outputTokens": 1709,
+    "outputTokenDetails": {
+      "textTokens": 872,
+      "reasoningTokens": 837
+    },
+    "totalTokens": 4940,
+    "raw": {
+      "input_tokens": 3231,
+      "output_tokens": 1709,
+      "output_tokens_details": {
+        "thinking_tokens": 837
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  }
+}

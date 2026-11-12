@@ -1,0 +1,101 @@
+{
+  "output": {
+    "action": "NEED_MORE_INFO",
+    "refundType": null,
+    "amount": null,
+    "sellerCaseStrength": "MEDIUM",
+    "reasoning": "The buyer only wrote 'Not what I expected' and gave no specific problem, so it is not yet clear whether the rug fails the listing. Your records show Canada Post marked it delivered on 2026-10-25, and the listing gives the size and says colours may vary, which helps you if the complaint is about colour or size. Please answer the questions below so the right response can be chosen.",
+    "evidenceUsed": [
+      {
+        "source": "PAYPAL_DATA",
+        "point": "Buyer's only message on PayPal is 'Not what I expected.' and the reason is merchandise not as described."
+      },
+      {
+        "source": "PAYPAL_DATA",
+        "point": "Disputed amount is 150 CAD, with 12 days left to respond."
+      },
+      {
+        "source": "SELLER",
+        "point": "Listing describes a handmade wool rug, 90x150 cm, and states colours may vary slightly from screen."
+      },
+      {
+        "source": "SELLER",
+        "point": "Listing states returns are accepted within 14 days."
+      },
+      {
+        "source": "PAYPAL_DATA",
+        "point": "Canada Post tracking DEMO-CP-118820 shows Delivered on 2026-10-25, but signature on delivery was not obtained."
+      }
+    ],
+    "evidenceGaps": [
+      "The specific way the rug differs from the listing (size, colour, material, or condition) is not stated.",
+      "No buyer statement is on file explaining the complaint.",
+      "No photos or messages showing the item as received are on file.",
+      "No record of whether the buyer asked for a return before opening the dispute."
+    ],
+    "alternatives": [
+      {
+        "action": "CONTEST",
+        "whyNot": "Contesting now would rely on delivery and listing details without knowing what the buyer says is wrong, so the response may not address the complaint."
+      },
+      {
+        "action": "MAKE_OFFER",
+        "whyNot": "A partial refund amount cannot be fairly set until the actual mismatch is known."
+      }
+    ],
+    "draftNote": "Hello, we have received the dispute for the handmade wool rug. Could you please tell us specifically what differs from the listing, such as size, colour, material, or condition, and share any photos? Our listing states the size as 90x150 cm and notes colours may vary slightly from screen. We want to resolve this fairly and promptly.",
+    "followUpQuestions": [
+      {
+        "id": "q1",
+        "question": "What specifically is different from what you expected: size, colour, material, condition, or something else?",
+        "answerType": "text"
+      },
+      {
+        "id": "q2",
+        "question": "Did the buyer contact you directly or request a return before opening this dispute?",
+        "answerType": "yes_no"
+      },
+      {
+        "id": "q3",
+        "question": "Do you have photos of the rug as packed and shipped, or any messages showing the buyer's concern?",
+        "answerType": "text"
+      }
+    ],
+    "nextSteps": [
+      "Ask the buyer through PayPal to describe the specific problem and share photos.",
+      "Gather the product description, listing URL, and return policy to submit with your response.",
+      "Once the buyer answers, decide whether to contest, offer a partial refund, or accept the claim.",
+      "Respond well before the 12 days remaining."
+    ]
+  },
+  "usage": {
+    "inputTokens": 3063,
+    "inputTokenDetails": {
+      "noCacheTokens": 3063,
+      "cacheReadTokens": 0,
+      "cacheWriteTokens": 0
+    },
+    "outputTokens": 1580,
+    "outputTokenDetails": {
+      "textTokens": 1020,
+      "reasoningTokens": 560
+    },
+    "totalTokens": 4643,
+    "raw": {
+      "input_tokens": 3063,
+      "output_tokens": 1580,
+      "output_tokens_details": {
+        "thinking_tokens": 560
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  }
+}

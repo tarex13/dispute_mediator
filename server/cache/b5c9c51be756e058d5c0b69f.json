@@ -1,0 +1,91 @@
+{
+  "output": {
+    "action": "NEED_MORE_INFO",
+    "refundType": null,
+    "amount": null,
+    "sellerCaseStrength": "MEDIUM",
+    "reasoning": "The buyer has only said the rug was 'Not what I expected,' so we cannot yet tell whether the complaint is about size, colour, condition, or something else. Your records show Canada Post marked the rug delivered on 2026-10-25 and your listing states the size and that colours may vary, which helps you if the complaint is about those points. Please answer the questions below so we can choose between contesting and offering a partial or full refund.",
+    "evidenceUsed": [
+      {
+        "source": "PAYPAL_DATA",
+        "point": "The dispute reason is MERCHANDISE_OR_SERVICE_NOT_AS_DESCRIBED, with 12 days left and a disputed amount of 150 CAD."
+      },
+      {
+        "source": "BUYER",
+        "point": "The only buyer message on PayPal is 'Not what I expected.' No specific defect or mismatch is named."
+      },
+      {
+        "source": "SELLER",
+        "point": "Canada Post tracking DEMO-CP-118820 shows the handmade wool rug as Delivered on 2026-10-25, with no signature on delivery."
+      },
+      {
+        "source": "SELLER",
+        "point": "The listing describes the rug as 90x150 cm and says colours may vary slightly from screen, and the return policy allows returns within 14 days."
+      }
+    ],
+    "evidenceGaps": [
+      "The specific reason the buyer says the rug is not as expected (size, colour, material, or condition).",
+      "Photos of the rug as shipped and its packaging at dispatch.",
+      "Whether the buyer has contacted you directly or requested a return.",
+      "Any product photos or description pages showing the rug as listed."
+    ],
+    "alternatives": [
+      {
+        "action": "CONTEST",
+        "whyNot": "Delivery evidence is strong, but the buyer's complaint is too vague to contest well until you know what the issue is."
+      },
+      {
+        "action": "ACCEPT_CLAIM",
+        "whyNot": "Nothing provided shows you admitted fault, never shipped, or that the rug differs from its listing, so a full refund is not yet justified."
+      }
+    ],
+    "draftNote": "Regarding this dispute, we have received the buyer's message that the item was 'Not what I expected.' Our records show the order was shipped via Canada Post on 2026-10-20 and marked delivered on 2026-10-25. The listing describes the rug as 90x150 cm and notes that colours may vary slightly from screen. Could the buyer please tell us which part of the item differs from the listing so we can review this fairly?",
+    "followUpQuestions": [
+      {
+        "id": "q1",
+        "question": "What specifically did the buyer say was not as expected, such as size, colour, material, or condition?",
+        "answerType": "text"
+      },
+      {
+        "id": "q2",
+        "question": "Do you have photos of the rug before it was packed and shipped?",
+        "answerType": "yes_no"
+      }
+    ],
+    "nextSteps": [
+      "Ask the buyer through PayPal which part of the rug does not match the listing.",
+      "Gather photos of the rug and packaging from before shipment.",
+      "Return to this decision once the buyer's specific complaint is known, and confirm that the listing text and return policy are saved."
+    ]
+  },
+  "usage": {
+    "inputTokens": 3177,
+    "inputTokenDetails": {
+      "noCacheTokens": 3177,
+      "cacheReadTokens": 0,
+      "cacheWriteTokens": 0
+    },
+    "outputTokens": 1725,
+    "outputTokenDetails": {
+      "textTokens": 1028,
+      "reasoningTokens": 697
+    },
+    "totalTokens": 4902,
+    "raw": {
+      "input_tokens": 3177,
+      "output_tokens": 1725,
+      "output_tokens_details": {
+        "thinking_tokens": 697
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  }
+}
